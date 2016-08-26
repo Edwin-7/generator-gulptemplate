@@ -25,8 +25,8 @@ gulp.task('js.min',function(){
 gulp.task('scss2css',function(){
 	gulp.src('src/scss/main.scss')
 	.pipe(sass())
-	.pipe(autoprefixer())
 	.on('error', sass.logError)
+	.pipe(autoprefixer())
 	.pipe(gulp.dest('dist/css/'));
 })
 
